@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="row">
+		<h1>Oчки</h1>
+		<h1 class="scoretext ml-20">0</h1>
+	</div>
+	<h1 class="juck">Жуки 0</h1>
+
+
+
+
+
+	<script type="text/javascript">
+		let score = 0
+		let timer = function(){
+			let elem = document.createElement("img");
+			document.body.appendChild(elem);
+			elem.src = "img.svg";
+			elem.style.height = "100px";
+			elem.style.width = "100px";
+			elem.style.position = "absolute";
+			elem.style.display= "block"
+			elem.style.marginLeft = Math.random()*1200+"px"
+			elem.style.marginTop = Math.random()*550+"px"
+			document.querySelector(".juck").innerHTML = grose;
+			grose = grose + 1
+			 elem.onclick = function(){
+			 	elem.style.display = "none"
+			 	document.querySelector(".scoretext").innerHTML = score;
+			 	score = score + 1
+			 }
+
+		}
+		setInterval(timer,1000)
+
+		let grose = 0
+
+
+
+
+
+
+
+		
+
+
+
+	</script>
+</body>
+</html>
